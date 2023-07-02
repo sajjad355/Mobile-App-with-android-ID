@@ -37,7 +37,7 @@ export default class App extends React.Component {
           <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 10, marginRight: 10, marginTop: -10, paddingTop: 5, paddingBottom: 5, backgroundColor: '#43a047', paddingLeft: 10 }}>
             FAREAST PR
           </Text>
-          <Text style={{ color: 'black', textAlign: 'center', marginTop: 30, fontSize:18 }}>
+          <Text style={{ color: 'black', textAlign: 'center', marginTop: 30, fontSize:15 }}>
             - ANDROID ID -
           </Text>
           {/* <Text style={{ color: 'black', fontWeight: 'bold', textAlign: 'center' }}>
