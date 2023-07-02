@@ -15,7 +15,7 @@ export default class App extends React.Component {
         name: '···',
         username: '···'
       },
-      androidId: 0,
+      androidId: '',
     };
 
   }
@@ -34,25 +34,39 @@ export default class App extends React.Component {
     return (
       <View>
         <View style={styles.container}>
-          <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 10, marginRight: 10, marginTop: -10, paddingTop: 5, paddingBottom: 5, backgroundColor: 'green',paddingLeft:10 }}>
+          <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 10, marginRight: 10, marginTop: -10, paddingTop: 5, paddingBottom: 5, backgroundColor: '#43a047', paddingLeft: 10 }}>
             FAREAST PR
           </Text>
-          <Text style={{ color: 'black', textAlign: 'center', marginTop: 30 }}>
+          <Text style={{ color: 'black', textAlign: 'center', marginTop: 30, fontSize:18 }}>
             - ANDROID ID -
           </Text>
-          <Text style={{ color: 'black', fontWeight: 'bold', textAlign: 'center' }}>
+          {/* <Text style={{ color: 'black', fontWeight: 'bold', textAlign: 'center' }}>
             {this.state.androidId}
-          </Text>
+          </Text> */}
+
+          <TextInput
+            autoCorrect={false}
+            editable={false}
+            autoCapitalize='none'
+            value={this.state.androidId}
+            textColor="black"
+            keyboardType='text'
+            placeholder="Re-type new Password"
+            style={[styles.inputs, { textAlign: 'center' }]}
+            underlineColorAndroid='transparent'
+            placeholderTextColor="#e0e0e0"
+            fontFamily={"Quicksand-Medium"}
+          />
+
           <TouchableOpacity onPress={() => Clipboard.setString(this.state.androidId)}>
-          <View style={{ flexDirection: 'row', alignSelf:'center',backgroundColor:'#43a047', width:150, marginTop:30 }}>
-              <Text style={{ color: 'white', paddingLeft: 18, marginTop: 7, paddingBottom:8 }}>
+            <View style={{ flexDirection: 'row', alignSelf: 'center', backgroundColor: '#43a047', width: 150, marginTop: 30 }}>
+              <Text style={{ color: 'white', paddingLeft: 18, marginTop: 7, paddingBottom: 8 }}>
                 Copy to Clipboard
                 {/* <Icon name='content-copy' color='#000' size={60 * 1.3}></Icon> */}
               </Text>
             </View>
           </TouchableOpacity>
         </View>
-
       </View>
     );
   }
@@ -67,5 +81,19 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     backgroundColor: 'white',
     borderRadius: 10
-  }
+  },
+  inputs: {
+    borderWidth: 2,
+    borderRadius: 8,
+    padding: 12.5,
+    height: 50,
+    borderColor: '#43a047',
+    marginBottom: 10,
+    color: '#000',
+    fontFamily: 'Quicksand-Medium',
+    fontSize: 20,
+    marginTop:10,
+    marginLeft:10,
+    marginRight:10
+  },
 });
