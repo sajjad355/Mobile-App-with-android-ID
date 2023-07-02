@@ -34,7 +34,7 @@ export default class App extends React.Component {
     return (
       <View>
         <View style={styles.container}>
-          <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 10, marginRight: 10, marginTop: 0, paddingTop: 5, paddingBottom: 5, backgroundColor: 'green' }}>
+          <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 10, marginRight: 10, marginTop: -10, paddingTop: 5, paddingBottom: 5, backgroundColor: 'green',paddingLeft:10 }}>
             FAREAST PR
           </Text>
           <Text style={{ color: 'black', textAlign: 'center', marginTop: 30 }}>
@@ -44,7 +44,7 @@ export default class App extends React.Component {
             {this.state.androidId}
           </Text>
           <TouchableOpacity onPress={() => Clipboard.setString(this.state.androidId)}>
-          <View style={{ flexDirection: 'row', alignSelf:'center',backgroundColor:'#43a047', width:150, marginTop:10 }}>
+          <View style={{ flexDirection: 'row', alignSelf:'center',backgroundColor:'#43a047', width:150, marginTop:30 }}>
               <Text style={{ color: 'white', paddingLeft: 18, marginTop: 7, paddingBottom:8 }}>
                 Copy to Clipboard
                 {/* <Icon name='content-copy' color='#000' size={60 * 1.3}></Icon> */}
@@ -60,7 +60,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    marginTop: 30,
     marginLeft: 10,
     marginRight: 10,
     paddingTop: 30,
